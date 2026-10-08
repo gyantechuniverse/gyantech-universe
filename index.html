@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071326">
+<meta name="description" content="GyanTech Universe — Jharkhand updates, scholarships, government schemes, technology guides and useful tutorials.">
+<title>GyanTech Universe | News & Updates</title>
+<link rel="icon" href="assets/logo.jpg"><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><img src="assets/logo.jpg" alt="GyanTech Universe logo"><span><b>GyanTech <i>Universe</i></b><small>LEARN · TECH · GROW TOGETHER</small></span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+  <nav id="nav"><a href="#home">Home</a><a href="#latest">Latest Posts</a><a href="#categories">Categories</a><a href="#videos">YouTube</a><button class="admin-open" id="adminOpen">Admin Login</button></nav>
+</header>
+<main>
+<section class="hero" id="home"><div class="hero-text"><div class="eyebrow"><span></span> OFFICIAL NEWS & INFORMATION WEBSITE</div><h1>Kaam ki jaankari,<br><em>ab ek hi jagah.</em></h1><p>Jharkhand updates, scholarships, government schemes aur technology guides — simple Hindi mein.</p><div class="hero-buttons"><a class="btn primary" href="#latest">Latest Updates <b>↗</b></a><a class="btn secondary" href="https://youtube.com/@gyantechuniverse?si=nOZBo9FG_jX35M6g" target="_blank" rel="noopener">▶ YouTube Channel</a></div><div class="trust"><span>✓</span> Simple Hindi · Helpful guides · Regular updates</div></div>
+<div class="hero-art"><div class="ring r1"></div><div class="ring r2"></div><div class="hero-logo"><img src="assets/logo.jpg" alt="GyanTech Universe"></div><div class="bubble bubble1">🎓 <span><b>Scholarships</b><small>Student updates</small></span></div><div class="bubble bubble2">📱 <span><b>Digital Guides</b><small>Step-by-step help</small></span></div></div></section>
+<section class="category-strip" id="categories">
+<a href="#latest" data-filter="Scholarship"><span>🎓</span><b>Scholarships</b><small>Student updates</small></a><a href="#latest" data-filter="Jharkhand"><span>🏛️</span><b>Jharkhand</b><small>Local updates</small></a><a href="#latest" data-filter="Government Scheme"><span>📋</span><b>Govt. Schemes</b><small>Yojana & services</small></a><a href="#latest" data-filter="Technology"><span>💻</span><b>Technology</b><small>Apps & tutorials</small></a>
+</section>
+<section class="section" id="latest"><div class="section-head"><div><div class="kicker">FRESH INFORMATION</div><h2>Latest <em>Posts</em></h2><p>Useful updates aur guides — ek simple, searchable feed.</p></div><div class="searchbox"><span>⌕</span><input id="searchInput" placeholder="Search posts..." aria-label="Search posts"></div></div>
+<div class="filters" id="filters"><button class="filter active" data-filter="All">All Posts</button><button class="filter" data-filter="Scholarship">Scholarship</button><button class="filter" data-filter="Jharkhand">Jharkhand</button><button class="filter" data-filter="Government Scheme">Government Schemes</button><button class="filter" data-filter="Technology">Technology</button></div>
+<div class="posts-grid" id="postsGrid"><div class="loading">Loading latest posts…</div></div><div class="empty hidden" id="emptyState">No posts found. Try another search.</div>
+</section>
+<section class="youtube-section" id="videos"><div><div class="kicker">WATCH & LEARN</div><h2>Learn with <em>GyanTech Universe</em></h2><p>Video explainers aur tutorials ke liye hamare YouTube channel par aayein.</p><a class="btn primary" href="https://youtube.com/@gyantechuniverse?si=nOZBo9FG_jX35M6g" target="_blank" rel="noopener">Visit YouTube Channel ↗</a></div><div class="yt-card"><img src="assets/logo.jpg" alt=""><div><b>GyanTech Universe</b><small>Learn · Tech · Grow Together</small><a href="https://youtube.com/@gyantechuniverse?si=nOZBo9FG_jX35M6g" target="_blank" rel="noopener">Open channel ↗</a></div><span class="play">▶</span></div></section>
+<section class="about"><img src="assets/logo.jpg" alt=""><div><div class="kicker">ABOUT US</div><h2>Information made <em>simple.</em></h2><p>Hamari koshish hai ki scholarship, public services, Jharkhand updates aur technology ko simple Hindi mein samjhaya jaaye. Important decisions se pehle official sources par details verify karein.</p></div></section>
+</main>
+<footer><div class="footer-top"><a class="brand" href="#home"><img src="assets/logo.jpg" alt=""><span><b>GyanTech <i>Universe</i></b><small>LEARN · TECH · GROW TOGETHER</small></span></a><a href="https://youtube.com/@gyantechuniverse" target="_blank" rel="noopener">YouTube ↗</a></div><div class="footer-bottom"><span>© <span id="year"></span> GyanTech Universe</span><span>Independent information website · Verify official notices before applying.</span></div></footer>
+
+<div class="modal hidden" id="adminModal" role="dialog" aria-modal="true" aria-labelledby="adminTitle"><div class="modal-card"><button class="modal-x" id="closeAdmin" aria-label="Close">×</button><div class="kicker">SITE MANAGEMENT</div><h2 id="adminTitle">Admin <em>Login</em></h2><p class="modal-intro">Login karke posts create, edit, publish ya delete karein.</p>
+<div id="loginPanel"><label>Email<input type="email" id="adminEmail" autocomplete="username" placeholder="admin@example.com"></label><label>Password<input type="password" id="adminPassword" autocomplete="current-password" placeholder="Your password"></label><button class="btn primary wide" id="loginBtn">Login to Admin Panel</button><p class="small-note">Admin account Supabase dashboard mein setup hota hai. Public visitors ko admin access nahi milega.</p></div>
+<div id="dashboard" class="hidden"><div class="dashboard-head"><b>Manage Posts</b><button class="btn primary" id="newPostBtn">＋ New Post</button></div><div id="adminMessage" class="message"></div><div id="adminPosts"></div><button class="btn secondary wide" id="logoutBtn">Log out</button></div>
+<div id="editor" class="hidden"><div class="editor-head"><h3 id="editorHeading">New post</h3><button class="text-button" id="cancelEditor">Cancel</button></div><form id="postForm"><input type="hidden" id="postId"><label>Post title *<input id="postTitle" required maxlength="150" placeholder="Post ka title"></label><label>Category *<select id="postCategory" required><option>Scholarship</option><option>Jharkhand</option><option>Government Scheme</option><option>Technology</option><option>Education</option><option>News</option></select></label><label>Short summary *<textarea id="postSummary" required rows="3" maxlength="300" placeholder="Post ka short description"></textarea></label><label>Full article *<textarea id="postContent" required rows="7" placeholder="Yahan poori jaankari likhein..."></textarea></label><label>Cover image (optional)<input type="file" id="postImage" accept="image/*"><small>JPG, PNG ya WebP. Supabase Storage mein upload hogi.</small></label><label>Related link (optional)<input type="url" id="postLink" placeholder="https://..."></label><div class="form-actions"><button class="btn secondary" type="button" id="cancelEditor2">Cancel</button><button class="btn primary" type="submit" id="publishBtn">Publish Post</button></div><div id="editorMessage" class="message"></div></form></div>
+<div id="configWarning" class="config-warning hidden">Supabase config abhi set nahi hai. README mein diye gaye steps follow karke <code>config.js</code> mein Project URL aur anon/publishable key add karein. Secret/service-role key kabhi website mein mat daalein.</div>
+</div></div>
+<div class="toast hidden" id="toast"></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
