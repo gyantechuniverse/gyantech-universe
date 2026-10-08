@@ -1,1 +1,0 @@
-# gyantech-universe
